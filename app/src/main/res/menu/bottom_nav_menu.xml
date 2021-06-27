@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_stock"
+        android:icon="@drawable/ic_stock"
+        android:title="@string/title_stock" />
+
+    <item
+        android:id="@+id/navigation_do_pengiriman"
+        android:icon="@drawable/ic_do"
+        android:title="@string/title_do_pengiriman" />
+
+    <item
+        android:id="@+id/navigation_estimasi"
+        android:icon="@drawable/ic_estimasi"
+        android:title="@string/title_estimasi" />
+
+    <item
+        android:id="@+id/navigation_karyawan"
+        android:icon="@drawable/ic_karyawan"
+        android:title="@string/title_karyawan"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/title_setting" />
+
+</menu>

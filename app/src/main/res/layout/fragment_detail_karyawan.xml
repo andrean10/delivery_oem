@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.ui.karyawan.listkaryawan.detail.DetailKaryawanFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/layoutFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/dummyImgName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_person"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:id="@+id/dummyName"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@id/dummyImgName"
+                android:text="@string/name_karyawan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_karyawan_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dummyName"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/dummyImgName"
+                android:ellipsize="end"
+                android:hint="@string/titleName"
+                android:lines="1"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_karyawan_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/dummyImgName"
+                android:background="@color/primaryColor" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutNIK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFullName">
+
+            <ImageView
+                android:id="@+id/ic_edit_NIK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/dummyImgNIK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_person"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:id="@+id/dummyNIK"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@id/dummyImgNIK"
+                android:text="@string/nik_karyawan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_karyawan_NIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dummyNIK"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/dummyImgNIK"
+                android:ellipsize="end"
+                android:hint="@string/titleNIK"
+                android:lines="1"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_karyawan_NIK"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/dummyImgNIK"
+                android:background="@color/primaryColor" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutNIK">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/dummyImgPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_lock"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:id="@+id/dummyPassword"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_toEndOf="@id/dummyImgPassword"
+                android:text="@string/password_karyawan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_karyawan_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dummyPassword"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/dummyImgPassword"
+                android:ellipsize="end"
+                android:hint="@string/titlePassword"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_karyawan_password"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/dummyImgPassword"
+                android:background="@color/primaryColor" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_save_karyawan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="14dp"
+            android:text="@string/save"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutPassword"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_save_karyawan"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save_karyawan"
+            app:layout_constraintStart_toStartOf="@+id/btn_save_karyawan"
+            app:layout_constraintTop_toTopOf="@+id/btn_save_karyawan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

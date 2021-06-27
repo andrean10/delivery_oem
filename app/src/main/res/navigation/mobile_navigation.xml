@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_stock">
+
+    <fragment
+        android:id="@+id/navigation_estimasi"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.estimasi_pengiriman.EstimasiPengirimanFragment"
+        android:label="fragment_estimasi_pengiriman"
+        tools:layout="@layout/fragment_estimasi_pengiriman">
+        <action
+            android:id="@+id/action_navigation_estimasi_to_detailEstimasiPengirimanFragment"
+            app:destination="@id/detailEstimasiPengirimanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_stock"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.stock.StockFragment"
+        android:label="@string/title_stock"
+        tools:layout="@layout/fragment_stock">
+        <action
+            android:id="@+id/action_navigation_stock_to_detailStockBarangFragment"
+            app:destination="@id/detailStockBarangFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_do_pengiriman"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.do_pengiriman.DOPengirimanFragment"
+        android:label="@string/title_do_pengiriman"
+        tools:layout="@layout/fragment_do_pengiriman">
+        <action
+            android:id="@+id/action_navigation_do_pengiriman_to_detailDOPengirimanFragment"
+            app:destination="@id/detailDOPengirimanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_karyawan"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.karyawan.KaryawanFragment"
+        android:label="fragment_karyawan"
+        tools:layout="@layout/fragment_karyawan">
+        <action
+            android:id="@+id/action_navigation_karyawan_to_daftarKaryawanFragment"
+            app:destination="@id/listKaryawanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.setting.SettingFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_navigation_setting_to_detailKaryawanFragment"
+            app:destination="@id/detailKaryawanFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_detailAdminFragment"
+            app:destination="@id/detailAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listKaryawanFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.karyawan.listkaryawan.ListKaryawanFragment"
+        android:label="fragment_list_karyawan"
+        tools:layout="@layout/fragment_list_karyawan">
+        <argument
+            android:name="role"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_listKaryawanFragment_to_detailKaryawanFragment"
+            app:destination="@id/detailKaryawanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailKaryawanFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.karyawan.listkaryawan.detail.DetailKaryawanFragment"
+        android:label="fragment_detail_karyawan"
+        tools:layout="@layout/fragment_detail_karyawan">
+        <argument
+            android:name="nik"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="role"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="request"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="isDetail"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailStockBarangFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.stock.detail.DetailStockBarangFragment"
+        android:label="fragment_detail_stock_barang"
+        tools:layout="@layout/fragment_detail_stock_barang">
+        <argument
+            android:name="code_size"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="request"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDOPengirimanFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.do_pengiriman.detail.DetailDOPengirimanFragment"
+        android:label="fragment_detail_do_pengiriman"
+        tools:layout="@layout/fragment_detail_do_pengiriman">
+        <argument
+            android:name="no_do"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="request"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEstimasiPengirimanFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.estimasi_pengiriman.detail.DetailEstimasiPengirimanFragment"
+        android:label="fragment_detail_estimasi_pengiriman"
+        tools:layout="@layout/fragment_detail_estimasi_pengiriman">
+        <argument
+            android:name="code_size"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="request"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAdminFragment"
+        android:name="com.kontrakanprojects.tyreom.view.main.ui.admin.DetailAdminFragment"
+        android:label="fragment_detail_admin"
+        tools:layout="@layout/fragment_detail_admin">
+        <argument
+            android:name="idAdmin"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>

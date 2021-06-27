@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/primaryColor"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dummyImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_estimasi_pengiriman"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/layout_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view">
+
+            <TextView
+                android:id="@+id/tvDayNumber"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:text="07" />
+
+            <TextView
+                android:id="@+id/tvMonthNumber"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:text="Des" />
+
+            <TextView
+                android:id="@+id/tvYearNumber"
+                style="@style/CustomTextViewTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:text="2020" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dummyCodeSize"
+            style="@style/CustomTextViewTitleBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/code_size"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/div"
+            app:layout_constraintStart_toEndOf="@+id/dummyImg"
+            app:layout_constraintTop_toTopOf="@+id/dummyImg" />
+
+        <TextView
+            android:id="@+id/tv_code_size"
+            style="@style/CustomTextViewTitleBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/dummyCodeSize"
+            app:layout_constraintTop_toTopOf="@+id/dummyCodeSize"
+            tools:text="12345" />
+
+        <View
+            android:id="@+id/div"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#5C707070"
+            app:layout_constraintBottom_toBottomOf="@+id/dummyImg"
+            app:layout_constraintEnd_toEndOf="@+id/tv_code_size"
+            app:layout_constraintStart_toStartOf="@+id/dummyCodeSize"
+            app:layout_constraintTop_toTopOf="@+id/dummyImg" />
+
+        <TextView
+            android:id="@+id/dummyQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/quantity"
+            app:layout_constraintStart_toStartOf="@+id/div"
+            app:layout_constraintTop_toBottomOf="@+id/div" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/div"
+            app:layout_constraintStart_toEndOf="@+id/dummyQuantity"
+            app:layout_constraintTop_toTopOf="@+id/dummyQuantity"
+            tools:text="1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 pcs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

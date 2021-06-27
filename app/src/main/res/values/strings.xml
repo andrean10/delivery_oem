@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">TYRE OM</string>
+    <string name="login_sebagai">Login Sebagai</string>
+    <string name="admin">ADMIN</string>
+    <string name="pic_oe_setting">PIC OE SETTING</string>
+    <string name="pic_stock_control">PIC STOCK CONTROL</string>
+    <string name="pic_prepare_suplay">PIC PREPARE SUPLAY</string>
+
+    // Login
+    <string name="text_login">Selamat Datang, Silahkan Login</string>
+    <string name="nik">NIK</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="title_activity_dashboard">MainActivity</string>
+    <string name="title_stock">Stock</string>
+    <string name="title_do_pengiriman">DO Pengiriman</string>
+    <string name="title_karyawan">Karyawan</string>
+    <string name="title_setting">Pengaturan</string>
+    <string name="title_activity_karyawans">KaryawansActivity</string>
+    <string name="karyawan_pic_stock_control">Karyawan Pic Stock Control</string>
+    <string name="karyawan_pic_oe_setting">Karyawan Pic OE Setting</string>
+    <string name="karyawan_pic_prepare_suplay">Karyawan PIC Prepare Suplay</string>
+    <string name="img_karyawan">Gambar Karyawan</string>
+    <string name="no_connection">No Connection</string>
+    <string name="failed">Failed</string>
+
+    <string name="name_karyawan">Nama Lengkap</string>
+    <string name="nik_karyawan">Nomor Induk Kepegawaian</string>
+    <string name="password_karyawan">Password</string>
+    <string name="alamat_karyawan">Alamat</string>
+    <string name="delete">Hapus</string>
+    <string name="delete_karyawan_title">Hapus Karyawan</string>
+    <string name="delete_karyawan_body">Apakah anda yakin ingin menghapus karyawan ?</string>
+    <string name="delete_stok_barang_body">Apakah anda yakin ingin menghapus stock barang ?</string>
+    <string name="delete_do_pengiriman_barang_body">Apakah anda yakin ingin menghapus data DO pengiriman ini ?</string>
+    <string name="delete_estimasi_pengiriman_barang_body">Apakah anda yakin ingin menghapus data estimasi pengiriman ini ?</string>
+    <string name="success">Sukses</string>
+    <string name="titleName">Masukkan Nama Lengkap Anda</string>
+    <string name="titleNIK">Masukkan NIK Anda</string>
+    <string name="pilihGambarBottomSheet">Pilh Gambar</string>
+    <string name="saveBottomSheet">Simpan</string>
+    <string name="cancelBottomSheet">Batal</string>
+    <string name="titlePassword">Masukkan Password Anda</string>
+    <string name="old_password">Password Lama</string>
+    <string name="new_password">Password Baru</string>
+    <string name="new_password_again">Ulangi Password Baru</string>
+    <string name="save">Simpan</string>
+    <string name="title_estimasi">Estimasi Pengiriman</string>
+    <string name="tambah_karyawan">Tambah Data Karyawan</string>
+    <string name="edit_karyawan">Edit Data Karyawan</string>
+    <string name="code_size">Code Size : </string>
+    <string name="code_size2">Masukkan Code Size</string>
+    <string name="quantity">Quantity : </string>
+    <string name="quantity2">Masukkan Quantity</string>
+    <string name="weekly">Weekly :</string>
+    <string name="weekly2">Masukkan Weekly</string>
+    <string name="tanggal">Masukkan Tanggal</string>
+    <string name="tambah_stok_barang">Tambah Stok Barang</string>
+    <string name="tambah_do_pengiriman">Tambah DO Pengiriman</string>
+    <string name="tambah_estimasi_pengiriman">Tambah Estimasi Pengiriman</string>
+    <string name="edit_stok_barang">Edit Stok Barang</string>
+    <string name="edit_do_pengiriman">Edit DO Pengiriman</string>
+    <string name="edit_estimasi_pengiriman">Edit Estimasi Pengiriman</string>
+    <string name="delete_stok_barang_title">Hapus Stock Barang</string>
+    <string name="delete_do_pengiriman_title">Hapus DO Pengiriman</string>
+    <string name="delete_estimasi_pengiriman_title">Hapus Estimasi Pengiriman</string>
+    <string name="log_out">Logout</string>
+    <string name="update">Update</string>
+
+    <string name="no_do">No DO :</string>
+    <string name="no_do2">Masukkan Nomor DO</string>
+    <string name="tanggal_do">Masukkan Tanggal DO</string>
+    <string name="username_admin">Username</string>
+    <string name="my_profile">Profile Saya</string>
+    <string name="detail_admin">Detail Admin</string>
+    <string name="message_warning_add_karyawan">Form ada yang kosong, isi semua data karyawan!</string>
+</resources>
