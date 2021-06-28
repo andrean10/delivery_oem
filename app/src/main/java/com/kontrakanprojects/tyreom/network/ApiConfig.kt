@@ -8,7 +8,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiConfig {
     companion object {
         // hosting
-        const val URL = "http://192.168.43.42:3000"
+        private const val URL = "https://tyre-orm.rproject-dev.com"
+
+        // local
+//        private const val URL = "http://192.168.43.42:3000"
 
         private const val ENDPOINT = "$URL/api/"
 
